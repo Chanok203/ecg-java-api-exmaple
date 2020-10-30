@@ -76,38 +76,4 @@ public class Result {
     public Result() {
     }
 
-    @Override
-    public String toString() {
-
-        // Found_AFib
-        String Found_AFibString = "\"Found_AFib\": " + this.Found_AFib;
-
-        // Found_LBBB
-        String Found_LBBBString = "\"Found_LBBB\": " + this.Found_LBBB;
-
-        // AFib_start_at
-        String AFib_start_atString = "\"AFib_start_at\": [";
-        for (Integer x : this.AFib_start_at) {
-            AFib_start_atString += x + ", ";
-        }
-
-        AFib_start_atString = AFib_start_atString.substring(0, AFib_start_atString.length() - 2) + "]";
-
-        // LBBB_start_at
-        String LBBB_start_atString = "\"LBBB_start_at\": [";
-        for (Integer x : this.LBBB_start_at) {
-            LBBB_start_atString += x + ", ";
-        }
-
-        LBBB_start_atString = LBBB_start_atString.substring(0, LBBB_start_atString.length() - 2) + "]";
-
-        // Combine String
-        return "{\n\t"
-                + Found_AFibString + ",\n\t"
-                + Found_LBBBString + ",\n\t"
-                + AFib_start_atString + ",\n\t"
-                + LBBB_start_atString
-                + "\n}";
-    }
-
 }
