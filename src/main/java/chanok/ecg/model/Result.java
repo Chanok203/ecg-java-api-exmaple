@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package chanok.ecg.model;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
@@ -16,64 +11,74 @@ import java.util.List;
  */
 public class Result {
 
-    // Found_AFib
-    @JsonProperty("Found_AFib")
-    private int Found_AFib;
+    // count_af
+    @JsonProperty("count_af")
+    private int count_af;
 
-    @JsonGetter("Found_AFib")
-    public int getFoundAFib() {
-        return this.Found_AFib;
+    @JsonGetter("count_af")
+    public int getCountAF() {
+        return this.count_af;
     }
 
-    @JsonSetter("Found_AFib")
-    public void setFoundAFib(int Found_AFib) {
-        this.Found_AFib = Found_AFib;
+    @JsonSetter("count_af")
+    public void setCountAF(int count_af) {
+        this.count_af = count_af;
     }
 
-    // Found_LBBB
-    @JsonProperty("Found_LBBB")
-    private int Found_LBBB;
+    // count_lbbb
+    @JsonProperty("count_lbbb")
+    private int count_lbbb;
 
-    @JsonGetter("Found_LBBB")
-    public int getFoundLBBB() {
-        return this.Found_LBBB;
+    @JsonGetter("count_lbbb")
+    public int getCountLBBB() {
+        return this.count_lbbb;
     }
 
-    @JsonSetter("Found_LBBB")
-    public void setFoundLBBB(int Found_LBBB) {
-        this.Found_LBBB = Found_LBBB;
+    @JsonSetter("count_lbbb")
+    public void setCountLBBB(int count_lbbb) {
+        this.count_lbbb = count_lbbb;
     }
 
-    // AFib_start_at
-    @JsonProperty("AFib_start_at")
-    private List<Integer> AFib_start_at;
+    // af_th
+    @JsonProperty("af_th")
+    private double af_th;
 
-    @JsonGetter("AFib_start_at")
-    public List<Integer> getAFibStartAt() {
-        return this.AFib_start_at;
+    @JsonGetter("af_th")
+    public double getAFTh() {
+        return this.af_th;
     }
 
-    @JsonSetter("AFib_start_at")
-    public void setAFibStartAt(List<Integer> AFib_start_at) {
-        this.AFib_start_at = AFib_start_at;
+    @JsonSetter("af_th")
+    public void setAFTh() {
+        this.af_th = af_th;
     }
 
-    // LBBB_start_at
-    @JsonProperty("LBBB_start_at")
-    private List<Integer> LBBB_start_at;
+    // lbbb_th
+    @JsonProperty("lbbb_th")
+    private double lbbb_th;
 
-    @JsonGetter("LBBB_start_at")
-    public List<Integer> getLBBBStartAt() {
-        return this.LBBB_start_at;
+    @JsonGetter("lbbb_th")
+    public double getLBBBTh() {
+        return this.lbbb_th;
     }
 
-    @JsonSetter("LBBB_start_at")
-    public void setLBBBStartAt(List<Integer> LBBB_start_at) {
-        this.LBBB_start_at = LBBB_start_at;
+    @JsonSetter("lbbb_th")
+    public void setLBBBTh() {
+        this.lbbb_th = lbbb_th;
     }
 
-    // Contructor
-    public Result() {
+    // result
+    @JsonProperty("result")
+    List<Sample> result;
+
+    @JsonGetter("result")
+    public List<Sample> getResult() {
+        return this.result;
+    }
+
+    @JsonSetter("result")
+    public void setResult(List<Sample> result) {
+        this.result = result;
     }
 
 }

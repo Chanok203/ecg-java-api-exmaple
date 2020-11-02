@@ -2,6 +2,7 @@
 package chanok.ecg.http;
 
 import chanok.ecg.model.Result;
+import chanok.ecg.model.Result;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -34,7 +35,7 @@ public class ECGUtils {
     }
     
     public Result getResultAsObject(String jsonString) throws Exception {
-        String urlString = this.host + "/";
+        String urlString = this.host + "/api/";
         URL url = new URL(urlString);
         HttpURLConnection httpCon = (HttpURLConnection) url.openConnection();
 
