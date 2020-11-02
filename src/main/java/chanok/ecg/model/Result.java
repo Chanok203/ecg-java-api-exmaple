@@ -81,4 +81,33 @@ public class Result {
         this.result = result;
     }
 
+    // time
+    @JsonProperty("time")
+    private double time;
+
+    @JsonGetter("time")
+    public double getTime() {
+        return this.time;
+    }
+    
+    @JsonSetter("time")
+    public void setTime(double time) {
+        this.time = time;
+    }
+    
+    // iamges_url
+    @JsonProperty("images_url")
+    private String images_url;
+    
+    public String getImagesURL() {
+        return this.images_url;
+    }
+    
+    public void setImagesURL(String images_url) {
+        this.images_url = images_url;
+    }
+    
+    
+    
+
 }
