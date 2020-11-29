@@ -35,7 +35,7 @@ public class ECGUtils {
     }
     
     public Result getResultAsObject(String jsonString) throws Exception {
-        String urlString = this.host + "/api/";
+        String urlString = this.host + "/api/predict";
         URL url = new URL(urlString);
         HttpURLConnection httpCon = (HttpURLConnection) url.openConnection();
 

@@ -4,7 +4,6 @@ import chanok.ecg.http.ECGUtils;
 import chanok.ecg.io.JsonReader;
 import chanok.ecg.model.Data;
 import chanok.ecg.model.Result;
-import chanok.ecg.model.Result;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -21,9 +20,9 @@ public class Main {
     }
 
     private void process() throws Exception {
-//        String host = "http://172.27.104.139:5000";
-//        String host = "http://localhost:5000";
-        String host = "http://44.225.195.38:8004";
+//        String host = "http://172.27.104.139:5000"; // Testing Local network
+//        String host = "http://localhost:5000"; // Localhost
+        String host = "http://44.225.195.38:8004"; // AWS
         ECGUtils ecgUtils = new ECGUtils(host);
 
         // Extract JSON File
